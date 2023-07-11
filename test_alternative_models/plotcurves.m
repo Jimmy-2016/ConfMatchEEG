@@ -13,8 +13,8 @@ ModelNames = {'TD', 'Bound', 'NDT', 'Mu'};
 
 
 %%
-NumIter = 200;
-Cohs = [0:5:25]/100;
+NumIter = 200;   % Inrease this number for more stabel results
+Cohs = [0:5:25]/100;  % You could choose the coherence resolution here
 AllCoh = repmat(Cohs,NumIter,1);
 
 AllW = [1, 0];  % Choose the Param you want from above section [HCA, LCA]
@@ -27,7 +27,7 @@ end
 load ([ModelNames{Model}, '.mat']);
 %% plotting
 
-SmoothBin = 3;
+SmoothBin = 3;  % This is the window of smoothing
 CohBin = Cohs;
 LW = 6;
 Colors = {[1 0 1], [1 .5 0]};
